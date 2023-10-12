@@ -9,6 +9,6 @@ module tt_um_randypeeters_i2c_segment_controller_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-assing uo_out[0] = 1;
+assign uo_out[0] = 1;
 
 endmodule
