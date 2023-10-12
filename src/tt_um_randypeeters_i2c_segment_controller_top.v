@@ -13,4 +13,8 @@ module tt_um_randypeeters_i2c_segment_controller_top #( parameter MAX_COUNT = 24
 
 assign uo_out[0] = 1;
 
+assign uio_oe = 8'b11111111;
+assign uio_out = 8'b11111111;
+assign uo_out[7:1] = 7'b1111111; 
+
 endmodule
