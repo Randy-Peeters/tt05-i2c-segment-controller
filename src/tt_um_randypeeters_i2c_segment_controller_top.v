@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_randypeeters_i2c_segment_controller_top (
+module tt_um_randypeeters_i2c_segment_controller_top #( parameter MAX_COUNT = 24'd10_000_000 )(
     input  wire [7:0] ui_in,    // Dedicated inputs - connected to the input switches
     output wire [7:0] uo_out,   // Dedicated outputs - connected to the 7 segment display
     input  wire [7:0] uio_in,   // IOs: Bidirectional Input path
