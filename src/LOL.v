@@ -12,9 +12,10 @@ always @(posedge(clk)) begin
         counter = 0;
         out = 1;
     end    
-    else
+    else begin
         counter = counter + 1;
         out = 0;
+    end
 end
 
 endmodule
