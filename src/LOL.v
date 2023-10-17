@@ -1,6 +1,6 @@
+`default_nettype none
 
-
-module test(
+module LOL(
     input wire clk,
     output reg out
 );
