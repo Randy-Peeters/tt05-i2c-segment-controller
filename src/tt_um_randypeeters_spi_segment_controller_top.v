@@ -15,16 +15,22 @@ assign uo_out[0] = ui_in[0] & ui_in[1] & ui_in[2] & ui_in[3];
 
 assign uio_oe = 8'b11111111;
 assign uio_out = 8'b11111111;
-assign uo_out[7:1] = 7'b1111111; 
+assign uo_out[7:2] = 7'b1111111; 
 
 reg [15:0] counter;
+reg uo_out_1;
+
+assign uo_out = uo_out_1;
 
 always @(posedge(clk)) begin
     if (counter == 16) begin
         counter = 0;
+        uo_out_1 = 1;
     end    
     else
         counter = counter + 1;
+        uo_out_1 = 0;
+        
 end
 
 endmodule
