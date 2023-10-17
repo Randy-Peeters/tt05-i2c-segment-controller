@@ -17,7 +17,7 @@ assign uio_oe       = 8'b11111111;
 assign uio_out      = 8'b11111111;
 assign uo_out[7:2]  = 6'b111111;
 
-test tst(.clk(clk), .out(uo_out[1]))
+test tst(.clk(clk), .out(uo_out[1]));
 
 
 
