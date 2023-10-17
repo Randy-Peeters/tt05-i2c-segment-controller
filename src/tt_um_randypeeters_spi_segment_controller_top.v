@@ -11,11 +11,11 @@ module tt_um_randypeeters_spi_segment_controller_top #( parameter MAX_COUNT = 24
     input  wire       rst_n     // reset_n - low to reset
 );
 
-assign uo_out[0] = ui_in[0] & ui_in[1] & ui_in[2] & ui_in[3];
+assign uo_out[0] = ui_in[0];
 
 assign uio_oe = 8'b11111111;
 assign uio_out = 8'b11111111;
-assign uo_out[7:2] = 7'b1111111; 
+assign uo_out[7:2] = 7'b1111111;
 
 reg [15:0] counter;
 reg uo_out_1;
