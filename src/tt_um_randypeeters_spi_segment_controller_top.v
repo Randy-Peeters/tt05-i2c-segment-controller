@@ -13,24 +13,12 @@ module tt_um_randypeeters_spi_segment_controller_top #( parameter MAX_COUNT = 24
 
 assign uo_out[0] = ui_in[0];
 
-assign uio_oe = 8'b11111111;
-assign uio_out = 8'b11111111;
-assign uo_out[7:2] = 7'b1111111;
+assign uio_oe       = 8'b11111111;
+assign uio_out      = 8'b11111111;
+assign uo_out[7:2]  = 6'b111111;
 
-reg [8:0] counter;
-reg uo_out_1 = 0;
+test tst(.clk(clk), .out(uo_out[1]))
 
-assign uo_out[1] = uo_out_1;
 
-always @(posedge(clk)) begin
-    if (counter == 16) begin
-        counter = 0;
-        uo_out_1 = 1;
-    end    
-    else
-        counter = counter + 1;
-        uo_out_1 = 0;
-        
-end
 
 endmodule
