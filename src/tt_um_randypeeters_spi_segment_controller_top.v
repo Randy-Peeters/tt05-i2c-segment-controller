@@ -18,7 +18,7 @@ assign uio_out = 8'b11111111;
 assign uo_out[7:2] = 7'b1111111;
 
 reg [8:0] counter;
-reg uo_out_1;
+reg uo_out_1 = 0;
 
 assign uo_out[1] = uo_out_1;
 
