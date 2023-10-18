@@ -28,11 +28,13 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      The data to be displayed is send via i2c to the controller. The controller will then set the number on the seven segment display.
+      The data to be displayed is send via SPI to the controller. The controller will then set the number on the seven segment display.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Connect a microcontroller to the i2c lines. Send the i2c data to the i2c register with adress 69 ;). See the result :)
+      Connect a microcontroller to the SPI lines. 
+      - Send the SPI data to the registers with adress 69 ;) for the segment number. See the result :)
+      - Send data to register address 70 for the 
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
