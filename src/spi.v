@@ -11,7 +11,7 @@ module spi(
 reg [8:0] shift_reg_in;
 reg [3:0] bit_count;
 
-always @(posedge(sck) or negedge(reset)) begin
+always @(posedge(sck) or negedge(rst_n)) begin
     
     //reset all the sequential circuits when the reset is pulled low.
     if (rst_n == 1'b0) begin
