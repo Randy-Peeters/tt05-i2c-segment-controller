@@ -11,13 +11,14 @@ module tt_um_randypeeters_spi_segment_controller_top(
     input  wire       rst_n     // reset_n - low to reset
 );
 
-assign uo_out[0] = ui_in[0];
 
-assign uio_oe       = 8'b11111111;
-assign uio_out      = 8'b11111111;
-assign uo_out[7:2]  = 6'b111111;
+assign uio_oe[7:1]  = 7'b0000000; //MAYBE CHANGE
+assign uio_out      = 8'b11111111; //MAYBE CHANGE
+assign uo_out       = 8'b11111111; //MAYBE CHANGE
 
+assign uio_oe[0]    = 1'b1;     //Assign the UIO_0 as output for the MISO.
 
+spi spi_instance(.rst_n(rst_n), .sck(ui_in[0]), .mosi(ui_in[1]), .miso(uio_out[0]));
 
 
 endmodule

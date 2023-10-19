@@ -38,8 +38,8 @@ documentation:
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - none
-    - none
+    - sck
+    - mosi
     - none
     - none
     - none
@@ -58,7 +58,7 @@ documentation:
     - dot
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    - none
+    - miso
     - none
     - none
     - none
