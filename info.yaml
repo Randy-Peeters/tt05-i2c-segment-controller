@@ -31,13 +31,14 @@ documentation:
       The data to be displayed is send via SPI to the controller.\
       The controller will then set the number on the seven segment display.\
       Register description:\
-        * Address 0x69: Segment control register\
-        * Adresss 0x70: Segment number register\
-        * Adresss 0x71: Individual segments register\
+      &nbsp;&nbsp;&nbsp;&nbsp;    Address 0x69: Segment control register\
+      &nbsp;&nbsp;&nbsp;&nbsp;    Adresss 0x70: Segment number register\
+      &nbsp;&nbsp;&nbsp;&nbsp;    Adresss 0x71: Individual segments register\
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
       Connect a microcontroller to the SPI lines.\
+      Send the data as described above and see the results.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
