@@ -12,11 +12,11 @@ module tt_um_randypeeters_spi_segment_controller_top(
 );
 
 
-assign uio_oe[7:1]  = 7'b0000000; //MAYBE CHANGE
-assign uio_out      = 8'b11111111; //MAYBE CHANGE
-assign uo_out       = 8'b11111111; //MAYBE CHANGE
+assign uio_oe[7:1]      = 7'b0000000; //MAYBE CHANGE
+assign uio_out[7:1]     = 7'b1111111; //MAYBE CHANGE
+assign uo_out           = 8'b11111111; //MAYBE CHANGE
 
-assign uio_oe[0]    = 1'b1;     //Assign the UIO_0 as output for the MISO.
+assign uio_oe[0]        = 1'b1;     //Assign the UIO_0 as output for the MISO.
 
 spi spi_instance(.rst_n(rst_n), .sck(ui_in[0]), .mosi(ui_in[1]), .miso(uio_out[0]));
 
