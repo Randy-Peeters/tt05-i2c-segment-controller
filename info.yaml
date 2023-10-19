@@ -28,12 +28,12 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      The data to be displayed is send via SPI to the controller.
-      The controller will then set the number on the seven segment display.
-      Register description:
-        Address 0x69: Segment control register
-        Adresss 0x70: Segment number register
-        Adresss 0x71: Individual segments register
+      The data to be displayed is send via SPI to the controller.\
+      The controller will then set the number on the seven segment display.\
+      Register description:\
+        Address 0x69: Segment control register\
+        Adresss 0x70: Segment number register\
+        Adresss 0x71: Individual segments register\
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
