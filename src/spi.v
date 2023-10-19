@@ -23,7 +23,7 @@ always @(posedge(sck) or negedge(reset)) begin
     //If the chip is selected.
     else if(cs_n == 1'b0) begin
         shift_reg_in[8] <= mosi;
-        shift_reg_in >> 1;
+        shift_reg_in = shift_reg_in >> 1;
     end
 end
 
